@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            width: 300px;
+            /* height: 100px; */
+            margin: auto;
+            text-align: center;
+            margin-top: 100px;
+            /* border: 1px solid lightgray; */
+            padding: 30px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 10px;
+            background-color: #d2e1f8;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+
+        #allbutton div{
+            width: 260px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+        }
+
+        #allbutton button{
+            width: 120px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+            background-color: #4c83ee;
+        }
+
+        #allInput input{
+            width: 250px;
+            margin-top: 10px;
+            height: 25px;
+            outline: none;
+            border: 1px solid rgb(146, 146, 146);
+            border-radius: 5px;
+        }
+
+        hr{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border: 2px solid rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h2>SMALL CALCULATOR</h2>
+        <div id="allInput">
+            <input type="number" id="first" placeholder="Enter first number">
+            <input type="number" id="second" placeholder="Enter second number">
+        </div>
+        <hr>
+        <div id="allbutton">
+            <div>
+                <button onclick="Addition()">Add</button>
+                <button onclick="Substract()">Subtract</button>
+            </div>
+            <div>
+                <button onclick="divide()">divide</button>
+                <button onclick="Multiply()">Multiply</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function Addition(){
+        let a= document.getElementById("first").value;
+        let b= document.getElementById("second").value;
+        alert(Number(a)+Number(b));
+    }
+    function Substract(){
+        let a= document.getElementById("first").value;
+        let b= document.getElementById("second").value;
+        alert(Number(a)-Number(b));
+    }
+    function divide(){
+        let a= document.getElementById("first").value;
+        let b= document.getElementById("second").value;
+        alert(Number(a)/Number(b));
+    }
+    function Multiply(){
+        let a= document.getElementById("first").value;
+        let b= document.getElementById("second").value;
+        alert(Number(a)*Number(b));
+    }
+</script>
